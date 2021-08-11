@@ -1,0 +1,87 @@
+#calc {
+  border: 1px solid black;
+  display: grid;
+  width: 300px;
+  height: 400px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "r r r e" "1 2 3 a" "4 5 6 s" "7 8 9 d" ". z . m";
+}
+
+#result {
+  height: 40px;
+  grid-area: r;
+}
+
+button {
+  border: 0px;
+  border-right: 1px solid rgb(196, 196, 196);
+  border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+button:hover {
+  background-color: rgb(189, 189, 189);
+  cursor: pointer;
+}
+
+#1 {
+  grid-area: 1;
+}
+
+#2 {
+  grid-area: 2;
+}
+
+#3 {
+  grid-area: 3;
+}
+
+#4 {
+  grid-area: 4;
+}
+
+#5 {
+  grid-area: 5;
+}
+
+#6 {
+  grid-area: 6;
+}
+
+#7 {
+  grid-area: 7;
+}
+
+#8 {
+  grid-area: 8;
+}
+
+#9 {
+  grid-area: 9;
+}
+
+#z {
+  grid-area: z;
+  border-left: 1px solid rgb(196, 196, 196);
+}
+
+#add {
+  grid-area: a;
+}
+
+#subtract {
+  grid-area: s;
+}
+
+#divide {
+  grid-area: d;
+}
+
+#multiply {
+  grid-area: m;
+}
+
+#equals {
+  grid-area: e;
+  border-left: 1px solid rgb(196, 196, 196);
+}
