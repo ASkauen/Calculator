@@ -13,6 +13,7 @@ function subtract(x, y) {
 }
 
 function divide(x, y) {
+  if (x == 0 || y == 0) return "Error: Div by 0"
   return (x / y)
 }
 
@@ -44,10 +45,11 @@ buttons.forEach(button => {
   let buttonId = button.getAttribute("id")
   button.addEventListener("click", () => {
     if (sum) {
-      numx = ""
+      numx = sum
+      sum = 0
       numy = ""
       operator = ""
-      input = "x"
+      input = ""
       display.textContent = ""
       document.getElementById("result").style.fontSize = "30px"
     }
@@ -56,7 +58,7 @@ buttons.forEach(button => {
       console.log(parseInt(buttonId), buttonId)
       if (input == "x") {
         buttonId != "z" ? numx += buttonId : numx += "0"
-      } else {
+      } else if (operator.textContent != ""){
         buttonId != "z" ? numy += buttonId : numy += "0"
       }
       sum = 0
@@ -86,7 +88,3 @@ buttons.forEach(button => {
     }
   })
 });
-
-function setX(num) {
-  numx += num
-}
